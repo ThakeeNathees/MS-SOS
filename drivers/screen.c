@@ -10,29 +10,7 @@ void print_char_hex(unsigned char hex, int offset, char attr);
 
 
 void test(){ 
-    int offset=0;
-    //printAttr("[", COLOR_WHITE);
-    //printAttr("*", COLOR_LIGHT_GREEN);
-    //printAttr("] everything is ok", COLOR_WHITE);
-    //set_cursor_nextline();
-    //offset = set_cursor_nextline();
 
-    while(1){
-    offset += printAtOffset("thakee@sony-pc", offset, 0xa);
-    offset += printAtOffset(":", offset, WHITE_ON_BLACK);
-    offset += printAtOffset("/Desktop", offset, COLOR_WHITE_BLUE);
-    offset += printAtOffset("$ ", offset, COLOR_WHITE);
-
-    char input[256]; for (int i=0; i<256; i++) input[i]=0;
-    char* inp = keyboard_get_input(offset, input);
-    offset = set_cursor_nextline();
-    if (*inp!=0){
-        printAtOffset(inp, offset, 0xe);
-        offset = set_cursor_nextline();
-    }
-
-    }
-  
 }
 
 
